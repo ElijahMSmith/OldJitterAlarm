@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">JitterAlarm</string>
+    <string name="event_description">Event Description</string>
+    <string name="event_name">Event Name</string>
+    <string name="time_until_first_alert">Time Until First Alert</string>
+    <string name="activation_interval">Activation Interval</string>
+    <string name="reset">RESET</string>
+    <string name="cancel_current">CANCEL CURRENT</string>
+    <string name="alert_time_offset_total">Alert Time Offset (Total)</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="set_time_of_alarm">Set time of alarm</string>
+    <string name="set_name_of_alarm">Set name of alarm</string>
+
+    <string name="alarm_title">Alarm Title</string>
+    <string name="alarm_time">Time of Trigger</string>
+    <string name="clear_all">Clear All</string>
+    <string name="create_alarm">Create Alarm</string>
+    <string name="cancel_alarm">Cancel Alarm</string>
+    <string name="activation_offset">Activation Offset</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="format_hh_mm_pm_am">Format —> HH:MM PM/AM</string>
+    <string name="format_hh_mm_ss">Format —> HH:MM:SS</string>
+    <string name="anything_you_want">Anything You Want!</string>
+    <string name="edit">Edit</string>
+    <string name="placeholder">PLACEHOLDER</string>
+</resources>

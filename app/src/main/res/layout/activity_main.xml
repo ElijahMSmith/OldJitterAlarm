@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/event_name"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/event_description"
+        android:id="@+id/description"
+        android:layout_below="@+id/nameInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/time_until_first_alert"
+        android:id="@+id/firstAlert"
+        android:layout_below="@+id/descriptionInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/activation_interval"
+        android:id="@+id/interval"
+        android:layout_below="@+id/firstAlertInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameInput"
+        android:width="500dp"
+        android:gravity="center"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:maxLength="40"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:hint="@string/set_name_of_alarm" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionInput"
+        android:width="500dp"
+        android:layout_below="@+id/description"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:maxLength="40"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:hint="@string/set_time_of_alarm" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/firstAlertInput"
+        android:layout_below="@+id/firstAlert"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/format_hh_mm_ss"
+        android:gravity="center"
+        android:maxLength="20"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/intervalInput"
+        android:layout_below="@+id/interval"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/format_hh_mm_ss"
+        android:gravity="center"
+        android:maxLength="20"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/cancel"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:onClick="startAlarm"
+        android:text="@string/reset"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_current"
+        android:id="@+id/cancel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="cancelAlarm"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/alert_time_offset_total"
+        android:id="@+id/offset"
+        android:layout_below="@+id/intervalInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/hoursInput"
+        android:width="100dp"
+        android:layout_below="@+id/offset"
+        android:layout_toStartOf="@+id/name"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hours"
+        android:gravity="center_horizontal"
+        android:maxLength="8"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/minutesInput"
+        android:width="100dp"
+        android:layout_below="@+id/offset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="@string/minutes"
+        android:gravity="center_horizontal"
+        android:maxLength="2"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/secondsInput"
+        android:width="100dp"
+        android:layout_below="@+id/offset"
+        android:layout_toEndOf="@+id/name"
+        android:layout_marginTop="10dp"
+        android:hint="@string/seconds"
+        android:gravity="center_horizontal"
+        android:maxLength="2"
+        android:importantForAutofill="no" />
+
+</RelativeLayout>
